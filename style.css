@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "PeoplefirstFightingTTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2406-2@1.0/PeoplefirstFightingTTF.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto; /*튀어나오는 부분 해결*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 그라데이션 배경 */
+  background-image: linear-gradient(
+    160deg,
+    rgb(190, 46, 54) 0%,
+    rgb(119, 53, 127) 55% 100%
+  );
+
+  /* 폰트 가져오기! */
+  font-family: "PeoplefirstFightingTTF";
+}
+
+/* 게임 하얀 부분 */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* intereact 부모 */
+  position: relative;
+
+  background: rgb(255, 255, 255, 0.5);
+  width: 50rem;
+  height: 32rem;
+  border-radius: 10px;
+}
+
+/* player 정보 */
+.player {
+  width: 50vw;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  player contents - name + score */
+.player-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 7rem;
+}
+
+.player-contents__name {
+  font-size: xx-large;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.player-contents__score {
+  font-size: 65px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+  color: rgb(199, 54, 95);
+}
+
+/* player current - text + score */
+.player-current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 10rem;
+  background: rgb(199, 54, 95);
+  border-radius: 10px;
+  margin-bottom: 0;
+
+  color: white;
+}
+
+/* player current - text */
+.player-current__text {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem 5rem 1rem 5rem;
+}
+
+/* player current - score */
+.player-current__score {
+  font-size: xx-large;
+  margin: 0 5rem 1rem 5rem;
+}
+
+/* intereact div - 이미지, 버튼  */
+.intereact {
+  /* block 값 없이 자유롭게 이동 */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* 가운데 정렬 */
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* intereact - 주사위 이미지 */
+#img-dice {
+  width: 5rem;
+  height: 5rem;
+
+  padding: 3.5rem 0 7rem 0;
+}
+
+/* intereact - 버튼 class */
+.intereact-btn {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  border: none;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(124, 118, 120);
+}
